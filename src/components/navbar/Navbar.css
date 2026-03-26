@@ -1,0 +1,38 @@
+.navbar {
+  background: linear-gradient(rgba(46, 69, 139, 0.504), rgba(0, 0, 0, 0.559));
+  max-height: 500px;
+}
+.navbar-content {
+  padding: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --------left--------- */
+
+.navbar-content .home {
+  height: 100%;
+  width: 200px;
+  transition: all 0.2s ease;
+}
+.navbar-content .home:hover {
+  transform: scale(1.03);
+}
+
+
+
+/* --------center--------- */
+.nav-center {
+  display: flex;
+  gap: 20px;
+}
+
+
+
+/* --------right--------- */
+
+.nav-right{
+    display: flex;
+gap: 20px;
+}

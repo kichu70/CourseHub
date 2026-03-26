@@ -1,0 +1,43 @@
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0px 0 2px 0px rgba(69, 72, 77, 0.858);
+
+}
+
+/* Primary */
+.btn-primary {
+  background:transparent;
+  color: white;
+  font-style: italic;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+  font-weight: 200;
+  letter-spacing: 2;
+}
+
+/* Secondary */
+.btn-secondary {
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+/* Outline */
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn:active {
+  /* transform: translateY(2px); */
+  /* box-shadow: 0px  0 0 10px rgba(227, 168, 168, 0.2); */
+  box-shadow: 0px 0 50px 0px rgba(59, 130, 246, 0.5);
+
+}
+.btn:hover{
+  transform: scale(1.1);
+}
