@@ -3,18 +3,33 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useRouter } from "next/navigation";
+import { useAuth } from "../../lib/auth";
 import Navbar from "@/components/navbar/Navbar";
 import { TextField, InputAdornment, IconButton } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function Login() {
+  const { login } = useAuth();
   const [show, setShow] = useState<boolean>(false);
   const [email, setEmail] = useState<string | "">("");
   const [password, setPassword] = useState<string | "">("");
   const [error, setError] = useState<boolean>(false);
 
   const router = useRouter();
-
+  const onsubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      if (!email.trim() || !password || password.length < 8) {
+        setError(true);
+        return;
+      } else {
+        setError(false);
+        login(email, password);
+      }
+    } catch (err) {
+      console.log(err, "error is in the submit....");
+    }
+  };
   return (
     <>
       <div className="login">
@@ -57,7 +72,7 @@ export default function Login() {
             </p>
           </div>
 
-          <form>
+          <form onSubmit={onsubmit}>
             {/* Email */}
             <div className="field">
               <TextField
@@ -101,19 +116,23 @@ export default function Login() {
                       ? "Password must contain at least 8 characters"
                       : ""
                 }
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton onClick={() => setShow(!show)} edge="end">
-                        {show ? <VisibilityOff /> : <Visibility />}
-                      </IconButton>
-                    </InputAdornment>
-                  ),
+                slotProps={{
+                  input: {
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton onClick={() => setShow(!show)} edge="end">
+                          {show ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    ),
+                  },
                 }}
               />
             </div>
 
-            <button className="btn-submit">Sign in →</button>
+            <button className="btn-submit" type="submit">
+              Sign in →
+            </button>
           </form>
           <h6>
             Don't have an account?
