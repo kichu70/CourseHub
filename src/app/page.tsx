@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div >
       <Navbar/>
+      <div style={{ marginTop: "120px" }}>
+
       hello my friends
+      </div>
     </div>
   );
 }
