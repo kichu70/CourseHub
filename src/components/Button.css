@@ -17,6 +17,7 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
   font-weight: 200;
   letter-spacing: 2;
+  text-transform: lowercase;
 }
 
 /* Secondary */

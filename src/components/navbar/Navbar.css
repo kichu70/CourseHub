@@ -1,6 +1,10 @@
 .navbar {
   background: linear-gradient(rgba(46, 69, 139, 0.504), rgba(0, 0, 0, 0.559));
   max-height: 500px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 .navbar-content {
   padding: 20;
