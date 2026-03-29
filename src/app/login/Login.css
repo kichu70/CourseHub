@@ -4,7 +4,7 @@
   font-family: 'Manrope', sans-serif;
   background: #08070f;
   color: white;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -128,7 +128,7 @@ label {
 }
 .right h6{
     color: #555555;
-    padding: 20px 5px;
+    padding: 20px 5px 0px;
     font-size: 13px;
 }
 .right h6 span{

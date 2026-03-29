@@ -137,9 +137,11 @@ export default function Login() {
           <h6>
             Don't have an account?
             <span onClick={() => router.push("/register")}>
-              {" "}
               Create one free
             </span>
+          </h6>
+          <h6>
+            <span>forget password ??</span>
           </h6>
         </div>
       </div>
