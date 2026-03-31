@@ -164,3 +164,10 @@ input::placeholder {
   background: rgba(255,255,255,0.1) !important;
 }
 
+/* ------------eye---------- */
+
+.eye{
+  position: absolute !important;
+  right: 20px;
+   color: #b0aeb7 !important;
+}
