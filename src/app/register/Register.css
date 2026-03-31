@@ -22,6 +22,7 @@
 }
 
 /* PROFILE */
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -41,7 +42,25 @@
   font-size: 12px;
   color: white;
 }
+.imgDeletBtn{
+  position: absolute;
+  top: 28;
+  right: 35%;
+  cursor: pointer;
+  color: #f4eef1;
+  background: #a71454dd;
+  padding:0 6px 1.5px 6px;
+  border-radius: 50%;
+}
+.imgDeletBtn:hover {
+  transform: scale(1.1);
+  box-shadow: rgb(211, 56, 232) 0 0 20px  ;
+}
 
+.imgDeletBtn:active{
+  box-shadow: red 0 0 20px  ;
+
+}
 /* INPUTS */
 .register input {
   padding: 12px;
@@ -81,3 +100,67 @@ input::placeholder {
   color: #f72585;
   cursor: pointer;
 }
+
+
+
+/* +++++++++++++ text feild+++++++++++++++++++ */
+
+
+
+.custom-input .MuiInputBase-input {
+  padding: 12px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  background: rgba(255,255,255,0.05) !important;
+  color: white !important;
+}
+
+.custom-input input::placeholder {
+  color: rgba(255,255,255,0.4) !important;
+}
+
+
+
+/* ++ selecct  */
+
+/* MAIN BOX (same as TextField) */
+.tf-select .MuiInputBase-root {
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: white;
+}
+
+/* INNER TEXT (same spacing as input) */
+.tf-select .MuiSelect-select {
+  padding: 12px !important;
+  color: white !important;
+  display: flex;
+  align-items: center;
+}
+
+
+/* DROPDOWN ICON */
+.tf-select .MuiSvgIcon-root {
+  color: white !important;
+}
+
+/* DROPDOWN MENU (options box) */
+.MuiPaper-root {
+  background: rgba(26, 5, 51, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: white !important;
+  border-radius: 10px !important;
+}
+
+/* OPTIONS */
+.MuiMenuItem-root {
+  font-size: 14px !important;
+}
+
+/* OPTION HOVER */
+.MuiMenuItem-root:hover {
+  background: rgba(255,255,255,0.1) !important;
+}
+
