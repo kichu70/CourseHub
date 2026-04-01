@@ -120,7 +120,7 @@ const Register = () => {
         toast.error("Something went wrong");
         console.log(
           err,
-          "Something went wrong error is in the frontend add user  ",
+          "Something went wrong error is in the frontend add user. ",
         );
       }
     }
