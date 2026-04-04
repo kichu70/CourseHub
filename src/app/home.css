@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #000005;
+  --surface: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.1);
+
+  --primary: #e44ee4;
+  --primary-soft: rgba(228, 78, 228, 0.164);
+  --dark-glass: rgba(0, 0, 0, 0.559);
+
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255,255,255,0.65);
+  --text-muted: rgba(255,255,255,0.35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 8%;
+  background: radial-gradient(circle at top, var(--primary-soft), transparent);
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  line-height: 1.2;
+}
+
+.hero-left span {
+  color: var(--primary);
+}
+
+.hero-left p {
+  margin: 20px 0;
+  color: var(--text-secondary);
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTONS */
+.primary {
+  background: linear-gradient(135deg, #e44ee4, #9f5cff);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(228, 78, 228, 0.3);
+}
+
+.secondary {
+  background: var(--dark-glass);
+  border: 1px solid var(--border);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+/* SEARCH */
+.search {
+  margin: 40px auto;
+  width: 60%;
+  background: var(--dark-glass);
+  padding: 12px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 80%;
+  padding-left: 10px;
+}
+
+.search button {
+  background: linear-gradient(135deg, #e44ee4, #9f5cff);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+/* COURSES */
+.courses {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.course-grid {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.course-card {
+  background: var(--surface);
+  padding: 18px;
+  border-radius: 18px;
+  width: 260px;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.course-card h3 {
+  margin: 12px 0;
+}
+
+.course-card span {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* TEACHER SECTION */
+.teacher {
+  margin: 80px 8%;
+  background: linear-gradient(
+    135deg,
+    rgba(228, 78, 228, 0.164),
+    rgba(0, 0, 0, 0.559)
+  );
+  padding: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: var(--surface);
+  padding: 25px;
+  border-radius: 18px;
+  width: 260px;
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.testimonial-card p {
+  color: var(--text-secondary);
+}
+
+
+.home {
+  background: radial-gradient(
+    circle at top,
+    rgba(228, 78, 228, 0.12),
+    transparent 60%
+  );
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 8%;
+}
+
+.hero-left h1 {
+  font-size: 55px;
+  line-height: 1.2;
+}
+
+.hero-left span {
+  background: linear-gradient(135deg, #e44ee4, #9f5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-left p {
+  margin: 20px 0;
+  color: var(--text-secondary);
+}
+
+.hero-img {
+  width: 420px;
+  filter: drop-shadow(0 20px 40px rgba(228, 78, 228, 0.3));
+}
+
+/* GLASS SECTIONS */
+.glass-section {
+  margin: 60px 8%;
+  padding: 40px;
+  border-radius: 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(228, 78, 228, 0.164),
+    rgba(0, 0, 0, 0.559)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.card-grid {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* CARD WRAPPER */
+.card-wrapper {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* MUI CARD OVERRIDE (IMPORTANT 🔥) */
+.card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 18px !important;
+  color: white !important;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #e44ee4 !important;
+}
+
+/* TEXT FIX FOR MUI */
+.MuiTypography-root {
+  color: white !important;
+}
+
+.price {
+  color: #e44ee4 !important;
+  font-weight: bold;
+}
+
+/* BUTTON OVERRIDE */
+.MuiButton-contained {
+  background: linear-gradient(135deg, #e44ee4, #9f5cff) !important;
+}
