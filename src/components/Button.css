@@ -36,7 +36,7 @@
 .btn:active {
   /* transform: translateY(2px); */
   /* box-shadow: 0px  0 0 10px rgba(227, 168, 168, 0.2); */
-  box-shadow: 0px 0 50px 0px rgba(59, 130, 246, 0.5);
+  box-shadow: 0px 0 50px 0px xrgba(224, 59, 246, 0.5);
 
 }
 .btn:hover{

@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(rgba(46, 69, 139, 0.504), rgba(0, 0, 0, 0.559));
+  background: linear-gradient(rgba(228, 78, 228, 0.164), rgba(0, 0, 0, 0.559));
   max-height: 500px;
   position: fixed;
   width: 100%;
@@ -11,6 +11,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* --------left--------- */
@@ -19,9 +21,12 @@
   height: 100%;
   width: 200px;
   transition: all 0.2s ease;
+  border-radius: 30px;
 }
 .navbar-content .home:hover {
   transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(199, 101, 231, 0.425);
+
 }
 
 
@@ -39,4 +44,69 @@
 .nav-right{
     display: flex;
 gap: 20px;
+}
+
+
+/* -------- MENU ICON -------- */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  z-index: 1100;
+}
+
+/* -------- MOBILE MENU -------- */
+.mobile-menu {
+  position: absolute;
+  top: 110%;
+  right: 20px;
+  width: 220px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 20px;
+  border-radius: 15px;
+
+  /* ✨ GLASS EFFECT */
+  background: rgba(42, 15, 42, 0.7);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE STATE */
+.mobile-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  
+}
+.mobile-menu.active Button:hover{
+
+  box-shadow: 0 0 10px rgba(216, 101, 231, 0.425);
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .nav-center,
+  .nav-right {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-content {
+    justify-content: space-between;
+  }
 }

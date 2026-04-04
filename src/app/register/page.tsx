@@ -40,13 +40,20 @@ const Register = () => {
     fileInputRef.current?.click();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setSelectedImage(file); // ✅ store file
-      setPreview(URL.createObjectURL(file)); // ✅ preview
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0];
+
+  if (file) {
+    // 🔥 check file size (1MB = 1024 * 1024 bytes)
+    if (file.size > 1024 * 1024) {
+      toast.error("Image size should be less than 1MB");
+      return;
     }
-  };
+
+    setSelectedImage(file);
+    setPreview(URL.createObjectURL(file));
+  }
+};
 
   const deleteprofile = () => {
     try {
